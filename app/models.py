@@ -31,3 +31,42 @@ class User(UserMixin,db.Model):
 
     def __repr__(self):
         return f'User {self.username}'
+
+
+class Quote:
+    """
+    Blueprint class for quotes consumed from API
+    """
+    def __init__(self, author, quote):
+        self.author = author
+        self.quote = quote
+
+
+class Blog(db.Model):
+    _tablename_='blogs'
+    id = db.Column(db.Integer, primary_key=True)
+    title = db.Column(db.String(255))
+    category = db.Column(db.String(255))
+    content= db.Column(db.String(255))
+    created_by= db.Column(db.String(255))
+    date_posted = db.Column(db.DateTime, default=datetime.utcnow)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
+
+        
+     # save/delete blog
+
+    def save_blog(self):
+        db.session.add(self)
+        db.session.commit()
+
+    def delete_blog(self):
+        db.session.delete(self)
+        db.session.commit()    
+
+    @classmethod
+    def get_blogs(cls,id):
+            blogs =Blog.query.filter_by(blog_id=id).all()
+            return blogs    
+
+    def repr(self):
+        return f'Blog {self.title}'
