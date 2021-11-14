@@ -50,7 +50,7 @@ class Blog(db.Model):
     content= db.Column(db.String(255))
     created_by= db.Column(db.String(255))
     date_posted = db.Column(db.DateTime, default=datetime.utcnow)
-    user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
+    user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
 
         
      # save/delete blog
@@ -65,8 +65,8 @@ class Blog(db.Model):
 
     @classmethod
     def get_blogs(cls,id):
-            blogs =Blog.query.filter_by(blog_id=id).all()
-            return blogs    
+        blogs =Blog.query.filter_by(blog_id=id).all()
+        return blogs    
 
     def repr(self):
         return f'Blog {self.title}'

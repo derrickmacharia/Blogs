@@ -8,21 +8,7 @@
 
 <div class="container">
   <div class="row">
-  <!-- displaying  Username-->
-    <div class="col-md-6 text-center cards cards1">
-      <h3>Username : {{user.username| capitalize}} </h3>
-      <p>Bio : {{user.bio}}</p>
-      <p>Email : {{user.email}}</p>
-      <!--Displaying user bio-->
-      {% if user.bio %}
-
-      {%else%}
-        <p> {{user.username| capitalize}} has no bio </p>
-      {% endif %}
-      {%if user == current_user %}
-      <a href="{{url_for('main.update_profile',uname=user.username)}}">Edit Profile</a>
-      {%endif%}
-    </div>
+  
     <!--Display profile photo-->
     <div class="col-md-5 cards">
       {% if user.profile_pic_path %}
@@ -37,6 +23,22 @@
       </form>
       {% endif %}
     </div>
+<!-- displaying  Username-->
+    <div class="col-md-6 text-center cards cards1">
+      <h3>Username : {{user.username| capitalize}} </h3>
+      <p>Bio : {{user.bio}}</p>
+      <p>Email : {{user.email}}</p>
+      <!--Displaying user bio-->
+      {% if user.bio %}
+
+      {%else%}
+        <p> {{user.username| capitalize}} has no bio </p>
+      {% endif %}
+      {%if user == current_user %}
+      <a href="{{url_for('main.update_profile',uname=user.username)}}">Edit Profile</a>
+      {%endif%}
+    </div>
+
 
   </div>
   

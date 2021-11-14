@@ -24,7 +24,7 @@ def test():
 
 @manager.shell
 def make_shell_context():
-    return dict(app=app, db=db, User=User, Quote=Quote,Blog=Blog)
+    return dict(app=app, db=db, User=User, Quote=Quote, Blog=Blog)
 
 
 if __name__=='__main__':
