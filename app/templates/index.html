@@ -54,6 +54,11 @@
                   <div class="col-md-6"><p><i class="fa fa-clock" aria-hidden="true"></i> {{blog.date_posted.strftime('%Y-%m-%d')}}</p></div>
                   <a href="{{ url_for('main.delete_blog',id=blog.id)}}" class="text-danger" title="Delete Post"><small><i
                     class="fa fa-trash"></i></small></a>
+                    <br>
+                    <div class="col-md-3">
+                        <a href="{{ url_for('main.blog_details', id = blog.id)}}"><button class="btn-success">Add a comment</button></a>
+                    </div>
+                    
                 </div>
             </div>
             
