@@ -1,7 +1,7 @@
-body{
+/* body{
     background: #161623;
     color: #fff;
-}
+} */
 
 
 .home{
@@ -93,7 +93,7 @@ h1{
     border-radius: 20px;
     position: relative;
     margin: 30px;
-    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    
     border-radius: 20px;
     background: rgba(255, 255, 255, 0.1);
     overflow: hidden;
@@ -102,16 +102,23 @@ h1{
 
 }
 
+.login:hover{
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+}
+
 .blogs{
     padding: 2rem;
     border-radius: 20px;
     margin: 2rem;
     position: relative;
-    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
     border-radius: 20px;
     background: rgba(255, 255, 255, 0.1);
     overflow: hidden;
     border-top: 2px solid rgba(255, 255, 255, 0.5);
     border-left: 2px solid rgba(255, 255, 255, 0.5);
 
+}
+
+.blogs:hover{
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
 }
