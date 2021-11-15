@@ -85,7 +85,20 @@
     <li><a href="{{url_for('auth.login')}}">Sign in</a></li>
     {%endif%}
   </ul>
-  <p>2021 Developer Derrick  |  All Rights Reserved</p>
+  
+  <form action="{{ url_for('main.subscribe')}}" class="search">
+    <div class="input-group">
+        <input type="email" class="form-control" placeholder="Enter your Email" name="email" required>
+        <br>
+        <div class="input-group-append">
+            <button class="btn-success" type="submit" >
+                <i class="fa fa-envelope"></i>
+            </button>
+        </div>
+    </div>
+</form>
+
+<p>2021 Developer Derrick  |  All Rights Reserved</p>
 </footer>
 
 

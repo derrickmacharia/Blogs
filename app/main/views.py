@@ -1,7 +1,7 @@
 from os import uname
 from flask import render_template,request,redirect,url_for,abort,flash
 from . import main
-from ..models import User,Quote,Blog,Comment
+from ..models import User,Quote,Blog,Comment, Subscriber
 from flask_login import login_required,current_user
 from .. import db,photos
 from .forms import UpdateProfile, BlogForm, CommentForm
@@ -138,3 +138,17 @@ def delete_comment(id):
   
     flash('You have successfully deleted the comment', 'success')
     return redirect(url_for('main.profile', uname=current_user.username))
+
+
+@main.route('/subscribe', methods=['GET', 'POST'])
+def subscribe():
+    """
+         subscribe function that subscribes the user to the post
+    """
+    email = request.args.get('email')
+    new_subscriber = Subscriber(email=email)
+    db.session.add(new_subscriber)
+    db.session.commit()
+    flash('Email submitted successfully', 'success')
+    return redirect(url_for('main.index'))
+
