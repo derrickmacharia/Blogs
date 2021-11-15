@@ -4,10 +4,12 @@
 {% block styles%}
     {{ super() }}
     <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+  integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 {% endblock %}
 
 <div class="container">
-  <div class="row">
+  <div class="row logos">
   
     <!--Display profile photo-->
     <div class="col-md-5 cards prof">
@@ -25,7 +27,7 @@
       </form>
       {% endif %}
     </div>
-<!-- displaying  Username-->
+    <!-- displaying  Username-->
     <div class="col-md-6 text-center cards cards1">
       <h3>Username : {{user.username| capitalize}} </h3>
       <p>Email : {{user.email}}</p>
@@ -42,9 +44,56 @@
       {%endif%}
     </div>
 
+    <div class="col-md-12">
+      <br>
+      <button><a href="/blog" class="tag">Add a Blog</a></button>
+        
 
+{% for blog in blogs %} 
+
+<h3>My blogs</h3>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Title</th>
+      <th scope="col">Category</th>
+      <th scope="col">Date Posted</th>
+      <th scope="col">Comments</th>
+      <th scope="col">Delete</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>{{blog.title}}</td>
+      <td>{{blog.category}}</td>
+      <td><i class="fa fa-clock" aria-hidden="true"></i> {{blog.date_posted.strftime('%Y-%m-%d')}}</td>
+      <td><i class="fa fa-user" aria-hidden="true"></i>   {{blog.created_by}}</td>
+      <td><a href="{{ url_for('main.delete_blog',id=blog.id)}}" class="text-danger" title="Delete Post"><small><i class="fa fa-trash"></i></small></a></td>
+    </tr>
+  </tbody>
+</table>
+
+{% endfor %}
   </div>
   
   </div>
 </div>
+
+<footer class="footer1">
+  <ul class="links">
+    {% if current_user.is_authenticated %}
+    <a class="navbar-brand" href="/"> Blog !!! </a>
+    <li><a href="/blog" class="tag"style="color: #EEC390;">Add a Blog</a></li>
+    <li class="user"><a href="{{url_for('main.profile',uname=current_user.username)}}">{{current_user.username}}</a></li>
+    <li><a href="{{url_for('auth.logout')}}">Sign out</a></li>
+    {% else %}
+    <li><a href="{{url_for('auth.login')}}">Sign in</a></li>
+    {%endif%}
+  </ul>
+  <p>2021 Developer Derrick  |  All Rights Reserved</p>
+</footer>
 {% endblock %}

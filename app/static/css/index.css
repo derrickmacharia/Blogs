@@ -1,14 +1,13 @@
 .home{
-    background-image: url("../images/img.jpg");
+    background-image: url("../images/blogg.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     height: 60vh;
-    color: crimson;
 }
 
 h1{
-    margin-top: 2rem;
+    margin-top: 4rem;
 }
 
 
@@ -42,6 +41,7 @@ h1{
     margin: 0 10px;
     display: inline-block;
     transition: 0.5s;
+    text-decoration: none;
 }
 
 .footer1 .links  a:hover{
@@ -55,6 +55,9 @@ h1{
     margin-bottom: 10px;
     font-size: 1.1em;
 }
+
+
+
 .prof{
     padding: 2rem 2rem;
     border-radius: 20px;

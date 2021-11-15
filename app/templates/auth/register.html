@@ -1,23 +1,35 @@
 {% extends 'base.html'%}
 {% import 'bootstrap/wtf.html' as wtf%}
+
+{% block styles%}
+    {{ super() }}
+    <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+  integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+{% endblock %}
+
 {% block content %}
 
-<div class="container">
+<body class="=lgform">
+    
+    <div class="container">
 
-    <div class="row">
-{% for message in get_flashed_messages() %}
-<div class="alert alert-danger">
-<button type="button" class="close" data-dismiss="alert">&times;</button>
-{{ message }}
-</div>
-{% endfor %}
-        <div class="col-md-2"> </div>
-        <div class="col-md-8">
-            {{wtf.quick_form(registration_form)}}
-        </div>
-        <div class="col-md-2"></div>
+        <div class="row">
+    {% for message in get_flashed_messages() %}
+    <div class="alert alert-danger">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    {{ message }}
     </div>
-</div>
+    {% endfor %}
+            <div class="col-md-2"> </div>
+            <div class="col-md-8">
+                {{wtf.quick_form(registration_form)}}
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    </div>
+
+</body>
 
 
 

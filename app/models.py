@@ -66,7 +66,12 @@ class Blog(db.Model):
     @classmethod
     def get_blogs(cls,id):
         blogs =Blog.query.filter_by(blog_id=id).all()
-        return blogs    
+        return blogs 
+
+    @classmethod
+    def get_current_blog(cls,user_id):
+            blogs =Blog.query.filter_by(user_id=user_id)
+            return blogs  
 
     def repr(self):
         return f'Blog {self.title}'
@@ -94,3 +99,9 @@ class Comment(db.Model):
         author = User.query.filter_by(id=user_id).first()
 
         return author
+
+    @classmethod
+    def delete_comment(cls, id):
+        comment = Comment.query.filter_by(id=id).first()
+        db.session.delete(comment)
+        db.session.commit()
