@@ -14,7 +14,7 @@
 <body>
         <!-- Content block -->
   <section class="homepage">
-    <div class="home">
+    <div class="home ">
         <div class="container start">
             <div class="row">
                 <div class="col-md-2"></div>
@@ -47,16 +47,16 @@
 {% for blog in blogs %} 
   <div class="col-md-4  blogs" id="posts">
       <div class="text-centre">
-          <div class="card text-white text-center mb-3" style="max-width: 30rem; margin:1vw; padding:1vw;">
+          <div class="card text-white text-center mb-3" style=" margin:1vw; padding:1vw;">
               <h4 class="card-header text-black">{{blog.title}}</h4>
               <div class="card-body">
 
-              <p class="card-title">{{blog.category}}</p>
+              <p class="card-title">Category : {{blog.category}}</p>
 
               <p class="card-text">Blog Description: {{blog.content}}</p>
               <div class="row">
                 <div class="col-md-6"><p class="card-text"><i class="fa fa-user" aria-hidden="true"></i>   {{blog.created_by}}</p></div>
-                <div class="col-md-6"><p><i class="fa fa-clock" aria-hidden="true"></i> {{blog.date_posted.strftime('%Y-%m-%d')}}</p></div>
+                <div class="col-md-6"><p><i class="fa fa-clock" aria-hidden="true"></i>   {{blog.date_posted.strftime('%Y-%m-%d')}}</p></div>
                   <br>
                   <div class="col-md-6">
                       <a href="{{ url_for('main.blog_details', id = blog.id)}}"><i class="fa fa-comments" aria-hidden="true"></i>   Comments </a>

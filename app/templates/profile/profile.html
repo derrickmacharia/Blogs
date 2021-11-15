@@ -49,11 +49,11 @@
       <button><a href="/blog" class="tag">Add a Blog</a></button>
         
 
-{% for blog in blogs %} 
 
 <h3>My blogs</h3>
 
-<table class="table table-striped">
+
+<table class="table">
   <thead>
     <tr>
       <th scope="col">#</th>
@@ -66,18 +66,22 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>{{blog.title}}</td>
-      <td>{{blog.category}}</td>
-      <td><i class="fa fa-clock" aria-hidden="true"></i> {{blog.date_posted.strftime('%Y-%m-%d')}}</td>
-      <td><i class="fa fa-user" aria-hidden="true"></i>   {{blog.created_by}}</td>
-      <td><a href="{{ url_for('main.delete_blog',id=blog.id)}}" class="text-danger" title="Delete Post"><small><i class="fa fa-trash"></i></small></a></td>
-    </tr>
+    {% for blog in blogs %}
+
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>{{blog.title}}</td>
+        <td>{{blog.category}}</td>
+        <td><i class="fa fa-clock" aria-hidden="true"></i> {{blog.date_posted.strftime('%Y-%m-%d')}}</td>
+        <td><i class="fa fa-user" aria-hidden="true"></i>   {{blog.created_by}}</td>
+        <td><a href="{{ url_for('main.delete_blog',id=blog.id)}}" class="text-danger" title="Delete Post"><small><i class="fa fa-trash"></i></small></a></td>
+      </tr>
+    </tbody>
+    {% endfor %}
+    
   </tbody>
 </table>
-
-{% endfor %}
   </div>
   
   </div>
@@ -97,3 +101,6 @@
   <p>2021 Developer Derrick  |  All Rights Reserved</p>
 </footer>
 {% endblock %}
+
+
+
