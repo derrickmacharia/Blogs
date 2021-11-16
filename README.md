@@ -35,3 +35,13 @@ This is a Python Application where a user(s) can post a blog and also allows oth
 * Delete created blogs and comments
 * View blogs of different categories.
 * Submit a blog to a specific category of their choice.
+
+
+## BDD
+| Behaviour | Input | Output |
+| :---------------- | :---------------: | ------------------: |
+| Load the page | *On page load* | Get all latest blogs, Select between signup and login on the right side|
+| Select SignUp| *Email,Username,Password* | Redirect to login|
+| Select Login | *Username* and *password* | Redirect to page with app blogs based on categories and commenting section|
+| Select comment button | *Comment* | Form that you input your comment|
+| Click on submit |  | Redirect to all comments tamplate with your comment and other comments|
