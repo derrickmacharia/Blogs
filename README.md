@@ -45,3 +45,34 @@ This is a Python Application where a user(s) can post a blog and also allows oth
 | Select Login | *Username* and *password* | Redirect to page with app blogs based on categories and commenting section|
 | Select comment button | *Comment* | Form that you input your comment|
 | Click on submit |  | Redirect to all comments tamplate with your comment and other comments|
+
+
+
+
+
+## Development Installation
+To get the code..
+
+1. Cloning the repository:
+  bash
+  https://github.com/derrickmacharia/blogs.git
+  
+2. cd to the folder and install requirements
+  bash
+  cd Pitches
+  pip install -r requirements.txt
+  
+3. Exporting Configurations
+  bash
+  export SQLALCHEMY_DATABASE_URI=postgresql+psycopg2://{User Name}:{password}@localhost/{database name}
+  
+4. Running the application
+  bash
+  ./start.sh
+  
+5. Testing the application
+  bash
+  python3.8 manage.py test
+  
+Open the application on your browser `127.0.0.1:5000`.
+
