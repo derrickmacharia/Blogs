@@ -30,8 +30,8 @@ This is a Python Application where a user(s) can post a blog and also allows oth
 ## User Story
   A user can;
 * Register to be allowed to log in to the application
-* Comment on different pitches posted by other users.
-* View the pitches posted by other users.
-* Vote on some or all pitches they have viewed by giving it a upvote or a downvote.
-* View pitches of different categories.
-* Submit a pitch to a specific category of their choice.
+* Comment on different blogs posted by other users.
+* View the blogs posted by other users.
+* Delete created blogs and comments
+* View blogs of different categories.
+* Submit a blog to a specific category of their choice.
