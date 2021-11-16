@@ -12,17 +12,19 @@ This is a Python Application where a user(s) can post a blog and also allows oth
 
 ## Live Link
 
+(https://blogderrick.herokuapp.com/)
+
 
 ## Screenshots
 
 ## Screenshot 1
-<img src="">
+<img src="app/static/images/Screenshot (1).png">
 
 ## Screenshot 2
-<img src="">
+<img src="app/static/images/Screenshot (2).png">
 
 ## Screenshot 3
-<img src="">
+<img src="app/static/images/Screenshot (3).png">
 
 ## Screenshot 4
 <img src="">
