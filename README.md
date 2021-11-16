@@ -26,8 +26,6 @@ This is a Python Application where a user(s) can post a blog and also allows oth
 ## Screenshot 3
 <img src="app/static/images/Screenshot (3).png">
 
-## Screenshot 4
-<img src="">
 
 ## User Story
   A user can;
