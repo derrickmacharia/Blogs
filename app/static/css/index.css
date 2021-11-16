@@ -1,7 +1,7 @@
-/* body{
+body{
     background: #161623;
     color: #fff;
-} */
+}
 
 
 .home{
@@ -121,4 +121,48 @@ h1{
 
 .blogs:hover{
     box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+
+.submit .btns a{
+    /* position: absolute;
+    top: 0;
+    left: 0; */
+    text-decoration: none;
+    padding: 1rem 2rem;
+    margin: 2rem 0rem;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 15px 35px rgba(255, 255, 255, 0.2);
+    border-top: 2px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    color: #fff;
+    z-index: 1;
+    font-weight: 400;
+    font-size: 16px;
+    overflow: hidden;
+    letter-spacing: 1px;
+    transition: 0.5s;
+    backdrop-filter: blur(18px);
+}
+.submit .btns a:hover{
+    letter-spacing: 3px;
+    /* background: linear-gradient(90deg, rgba(2,0,36,0.4) 0%, rgba(233,30,99,0.6) 35%, rgba(0,212,255,0.8) 100%);     */
+    
+}
+.submit .btns a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0.1),
+    transparent);
+    transform: skewX(45deg) translateX(0);
+    transition: 0.5s;
+}
+.submit .btns:hover a::before{
+    transform: skewX(45deg) translateX(200%);
+
 }
