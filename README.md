@@ -14,3 +14,24 @@ This is a Python Application where a user(s) can post a blog and also allows oth
 
 
 ## Screenshots
+
+## Screenshot 1
+<img src="">
+
+## Screenshot 2
+<img src="">
+
+## Screenshot 3
+<img src="">
+
+## Screenshot 4
+<img src="">
+
+## User Story
+  A user can;
+* Register to be allowed to log in to the application
+* Comment on different pitches posted by other users.
+* View the pitches posted by other users.
+* Vote on some or all pitches they have viewed by giving it a upvote or a downvote.
+* View pitches of different categories.
+* Submit a pitch to a specific category of their choice.
