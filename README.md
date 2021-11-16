@@ -83,3 +83,11 @@ Open the application on your browser `127.0.0.1:5000`.
 * [Flask==0.12.2](http://flask.pocoo.org/)
 * [Heroku](https://heroku.com)
 
+
+## Known Bugs
+* There are no bugs yet.
+
+
+## Support and contact details
+For more information,comments or clarification contact on derrick.macharia@student.moringaschool.com
+
